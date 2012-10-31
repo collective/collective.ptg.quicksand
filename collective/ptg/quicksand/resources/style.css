@@ -5,18 +5,6 @@
     position: relative;
 }
 
-.hidden {
-	display: none;
-}
-
-#quicksandbox div {
-float: left
-}
-
-
-
-/* 3.2 =Image Grid
----------------------------------------------------------------------- */
 
 #quicksandbox{
   margin: -20px 0 0 -40px;
@@ -32,7 +20,7 @@ float: left
   clear: both;
 }
 
-#quicksandbox li {
+#content #quicksandbox li {
   width: 128px;
   margin: 20px 0 0 35px;
   float: left;
@@ -44,7 +32,7 @@ float: left
   overflow: hidden;
 }
 
-#quicksandbox li img  {
+#content  #quicksandbox li img  {
   display: block;
 }
 
