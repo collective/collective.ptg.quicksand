@@ -43,7 +43,7 @@ class IQuicksandDisplaySettings(IBaseSettings):
         title=_(u"label_custom_style",
             default=u"Name of Custom css file if you chose that above"),
         default=u"mycustomstyle.css")
-
+        
 
 class QuicksandDisplayType(BaseDisplayType):
     name = u"quicksand"

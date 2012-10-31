@@ -1,10 +1,11 @@
 <div class="quicksand">
+ 
     <div id="source">
     <tal:images tal:repeat="img view/adapter/cooked_images">
-        <div tal:define="number repeat/img/index; 
+        <div class="quicksandbox" tal:define="number repeat/img/index; 
                         theimage img/image_url;
                         thethumb img/thumb_url"
-                        class="imagebox" tal:attributes="data-id number"> 
+                        tal:attributes="data-id number; class img/keywords"> 
         <a href="" tal:attributes="href img/link" >    
             <img src="" tal:define="image python: view.settings.simplegallery_use_icons and 
                 thethumb or
@@ -15,13 +16,14 @@
             <p class="image-desc" 
                tal:content="structure img/description" tal:condition="view/settings/quicksand_showdescription">Description</p> 
         </a>
+        <div tal:content="img/keywords" />
         </div>  
     </tal:images>    
     </div>     
 
     <script type="text/javascript">
 $(window).load(function(){
-    $('#source').quicksand( $('#destination div') );
+    $('#sourcde').quicksand( $('#destination div') );
 });
 </script>
 </div>
