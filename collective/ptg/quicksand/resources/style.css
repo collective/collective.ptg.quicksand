@@ -8,3 +8,7 @@
 .hidden {
 	display: none;
 }
+
+#quicksandbox div {
+float: left
+}

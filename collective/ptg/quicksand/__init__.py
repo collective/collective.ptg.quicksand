@@ -56,9 +56,6 @@ class QuicksandDisplayType(BaseDisplayType):
 <script type="text/javascript"
 src="%(portal_url)s/++resource++ptg.quicksand/jquery.quicksand.js">
 </script>
-<script type="text/javascript"
-src="%(portal_url)s/++resource++ptg.quicksand/sizzle.js">
-</script>
 <script type="text/javascript">
   // Custom sorting plugin
   (function($) {
@@ -71,10 +68,10 @@ src="%(portal_url)s/++resource++ptg.quicksand/sizzle.js">
 		arr = $data.get();
 		return $(arr);
 	};
-  })(jQuery);
+  });
 
   // DOMContentLoaded
-  $(function() {
+$(document).ready(function() {
   
 	// bind radiobuttons in the form
 	var $filterType = $('#filter input[name="type"]');
@@ -91,7 +88,7 @@ src="%(portal_url)s/++resource++ptg.quicksand/sizzle.js">
 		if ($($filterType+':checked').val() == 'all') {
 			var $filteredData = $data.find('div');
 		} else {
-			var $filteredData = $data.find('div[class=' + $($filterType+":checked").val() + ']');
+			var $filteredData = $data.find('.bilde');
 		}
 	
 	  // no sorting
@@ -100,11 +97,12 @@ src="%(portal_url)s/++resource++ptg.quicksand/sizzle.js">
 		
 		// finally, call quicksand
 		$quicksandbox.quicksand($sortedData, {
-			duration: 800,
+			duration: %(speed)i,
 			easing: 'easeInOutQuad'
 		});
 	});
   });
+
 </script>
 """ % {
     'speed': self.settings.duration,
