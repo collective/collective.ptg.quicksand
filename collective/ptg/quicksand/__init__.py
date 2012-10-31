@@ -56,10 +56,55 @@ class QuicksandDisplayType(BaseDisplayType):
 <script type="text/javascript"
 src="%(portal_url)s/++resource++ptg.quicksand/jquery.quicksand.js">
 </script>
+<script type="text/javascript"
+src="%(portal_url)s/++resource++ptg.quicksand/sizzle.js">
+</script>
 <script type="text/javascript">
-$(window).load(function(){
- 
-});
+  // Custom sorting plugin
+  (function($) {
+	$.fn.sorted = function(customOptions) {
+		var options = {
+			by: function(a) { return a.text(); }
+		};
+		$.extend(options, customOptions);
+		$data = $(this);
+		arr = $data.get();
+		return $(arr);
+	};
+  })(jQuery);
+
+  // DOMContentLoaded
+  $(function() {
+  
+	// bind radiobuttons in the form
+	var $filterType = $('#filter input[name="type"]');
+	var $filterSort = '';
+	
+	// get the first collection
+	var $quicksandbox = $('#quicksandbox');
+	
+	// clone quicksandbox to get a second collection
+	var $data = $quicksandbox.clone();
+
+	// attempt to call Quicksand on every form change
+	$filterType.add($filterSort).change(function(e) {
+		if ($($filterType+':checked').val() == 'all') {
+			var $filteredData = $data.find('div');
+		} else {
+			var $filteredData = $data.find('div[class=' + $($filterType+":checked").val() + ']');
+		}
+	
+	  // no sorting
+		var $sortedData = $filteredData; 
+
+		
+		// finally, call quicksand
+		$quicksandbox.quicksand($sortedData, {
+			duration: 800,
+			easing: 'easeInOutQuad'
+		});
+	});
+  });
 </script>
 """ % {
     'speed': self.settings.duration,

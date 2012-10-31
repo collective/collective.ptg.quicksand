@@ -1,27 +1,33 @@
 <div class="quicksand">
-    <div id="source">
+    <form id="filter">
+    	<fieldset>
+    	    <legend>Filter by type</legend>
+	        <label><input type="radio" name="type" value="all" checked="checked">Everything</label>
+			<label><input type="radio" name="type" value="bilde">Bilde</label>
+        	<label><input type="radio" name="type" value="util">Utilities</label>
+        	<label><input type="radio" name="type" value="espen">Espen</label>
+        </fieldset>
+ 
+
+    </form>
+    <div id="quicksandbox">
     <tal:images tal:repeat="img view/adapter/cooked_images">
         <div tal:define="number repeat/img/index; 
                         theimage img/image_url;
-                        thethumb img/thumb_url"
-                        class="imagebox" tal:attributes="data-id number"> 
-        <a href="" tal:attributes="href img/link" >    
+                        thethumb img/thumb_url;
+                        theclass img/keywords"
+                        tal:attributes="data-id number; class theclass"> 
+        	<a href="" tal:attributes="href img/link" >    
             <img src="" tal:define="image python: view.settings.simplegallery_use_icons and 
                 thethumb or
                 theimage" 
                 tal:attributes="src image"  
-            >
+            	>
             <h3 class="image-title" tal:content="img/title" tal:condition="view/settings/quicksand_showtitle">Title</h3> 
             <p class="image-desc" 
                tal:content="structure img/description" tal:condition="view/settings/quicksand_showdescription">Description</p> 
-        </a>
+        	</a>
         </div>  
     </tal:images>    
     </div>     
-
-    <script type="text/javascript">
-$(window).load(function(){
-    $('#source').quicksand( $('#destination div') );
-});
-</script>
-</div>
+ </div>
