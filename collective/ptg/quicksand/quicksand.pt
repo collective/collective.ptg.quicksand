@@ -19,27 +19,6 @@
     </tal:images>    
     </div>     
 
-
-<div id="destination" class="hidden">
-        <div class="imagebox" data-id="0"> 
-        <a href="http://localhost:8080/thumbnailzoom/bilder/tittel/view">    
-            <img src="http://localhost:8080/thumbnailzoom/bilder/tittel/image_thumb">
-        </a>
-        </div>  
-  
-        <div class="imagebox" data-id="2"> 
-        <a href="http://localhost:8080/thumbnailzoom/bilder/asdfawerqwer/view">    
-            <img src="http://localhost:8080/thumbnailzoom/bilder/asdfawerqwer/image_thumb">
-        </a>
-        </div>  
-        <div class="imagebox" data-id="3"> 
-        <a href="http://localhost:8080/thumbnailzoom/bilder/werqwerqw/view">    
-            <img src="http://localhost:8080/thumbnailzoom/bilder/werqwerqw/image_thumb">
-        </a>
-        </div>  
-</div>     
-
-
     <script type="text/javascript">
 $(window).load(function(){
     $('#source').quicksand( $('#destination div') );
