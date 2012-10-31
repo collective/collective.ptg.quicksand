@@ -10,9 +10,9 @@
  
 
     </form>
-    <div id="quicksandbox">
+    <ul id="quicksandbox">
     <tal:images tal:repeat="img view/adapter/cooked_images">
-        <div tal:define="number repeat/img/index; 
+        <li tal:define="number repeat/img/index; 
                         theimage img/image_url;
                         thethumb img/thumb_url;
                         theclass img/keywords"
@@ -27,7 +27,7 @@
             <p class="image-desc" 
                tal:content="structure img/description" tal:condition="view/settings/quicksand_showdescription">Description</p> 
         	</a>
-        </div>  
+        </li>  
     </tal:images>    
-    </div>     
+    </ul>     
  </div>

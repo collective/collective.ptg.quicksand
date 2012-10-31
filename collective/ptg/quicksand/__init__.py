@@ -86,7 +86,7 @@ $(document).ready(function() {
 	// attempt to call Quicksand on every form change
 	$filterType.add($filterSort).change(function(e) {
 		if ($($filterType+':checked').val() == 'all') {
-			var $filteredData = $data.find('div');
+			var $filteredData = $data.find('li');
 		} else {
 			var $filteredData = $data.find('.bilde');
 		}
