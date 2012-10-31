@@ -12,3 +12,165 @@
 #quicksandbox div {
 float: left
 }
+
+
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ 
+/* 1.2 =Default
+---------------------------------------------------------------------- */
+
+ 
+
+a {
+  color: #46c5ec;
+  border-bottom: 1px solid #294e5a;
+}
+
+a:hover,
+a:focus {
+  color: #ededed;
+  border-bottom-color: #595959;
+}
+
+a:active {
+  position: relative;
+  top: 1px;
+}
+
+ 
+label,
+label > input[type="checkbox"],
+label > input[type="radio"] {
+  cursor: pointer;
+}
+
+   
+
+table {
+  margin-left: -20px;
+  width: 900px;
+  background-color: #1d1f21;
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  border-radius: 5px;
+}
+
+th, td {
+  padding: 5px 10px;
+}
+
+th {
+  background-color: #33373b;
+  padding-bottom: 10px;
+}
+
+tr:first-child td { padding-top: 10px; }
+th:first-child, td:first-child { padding-left: 20px; }
+th { padding-top: 10px; }
+tr:last-child td { padding-bottom: 10px; }
+th:last-child, td:last-child { padding-right: 20px; }
+
+th:first-child {
+  -moz-border-radius-topleft: 5px;  
+  -webkit-border-top-left-radius: 5px;
+}
+
+th:last-child {
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+}
+
+table .param-name {
+  width: 150px;
+}
+
+table .param-default {
+  width: 100px;
+}
+
+.button {
+  background-color: #46c5ec;
+  color: #282b2e;
+  padding: 5px 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 0;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #ededed;
+  color: #282b2e;
+}
+
+
+
+/* 2.1 =Splitter
+---------------------------------------------------------------------- */
+             
+/* 2.10 =Footer
+---------------------------------------------------------------------- */
+
+.footer {
+  font-size: 11px;
+  text-shadow: rgba(255, 255, 255, 0.08) 0 1px 0;
+  margin: 40px 0 0;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.footer,
+.footer a {
+  color: #0e0f10;
+  text-decoration: none;
+  border-bottom: 0;
+}
+
+.footer span {
+  display: block;
+}
+
+  ty: 0.999;
+}
+
+/* 3.2 =Image Grid
+---------------------------------------------------------------------- */
+
+#quicksandbox{
+  margin: -20px 0 0 -40px;
+  padding-left: 45px;
+  width: 840px;
+}
+
+#quicksandbox:after {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+#quicksandbox li {
+  width: 128px;
+  margin: 20px 0 0 35px;
+  float: left;
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 17px;
+  color: #686f74;
+  height: 177px;
+  overflow: hidden;
+}
+
+#quicksandbox li img,
+#quicksandbox li strong {
+  display: block;
+}
+
+ 
