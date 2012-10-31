@@ -1,7 +1,6 @@
 from collective.plonetruegallery.utils import createSettingsFactory
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
-from collective.plonetruegallery.browser.views.display import \
-    BatchingDisplayType
+from collective.plonetruegallery.browser.views.display import BaseDisplayType
 from collective.plonetruegallery.interfaces import IBaseSettings
 from zope import schema
 from zope.i18nmessageid import MessageFactory
@@ -46,7 +45,7 @@ class IQuicksandDisplaySettings(IBaseSettings):
         default=u"mycustomstyle.css")
 
 
-class QuicksandDisplayType(BatchingDisplayType):
+class QuicksandDisplayType(BaseDisplayType):
     name = u"quicksand"
     schema = IQuicksandDisplaySettings
     description = _(u"label_quicksand_display_type",
@@ -55,11 +54,11 @@ class QuicksandDisplayType(BatchingDisplayType):
     def javascript(self):
         return u"""
 <script type="text/javascript"
-src="%(portal_url)s/++resource++ptg..quicksand/jquery.quicksand.js">
+src="%(portal_url)s/++resource++ptg.quicksand/jquery.quicksand.js">
 </script>
 <script type="text/javascript">
 $(window).load(function(){
-    $('.quicksand').quicksand( $('#destination li') );
+ 
 });
 </script>
 """ % {

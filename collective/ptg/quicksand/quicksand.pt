@@ -1,10 +1,10 @@
 <div class="quicksand">
-    <tal:images tal:repeat="img view/batch">
-    <div tal:define="number repeat/img/index; 
-                      theimage img/image_url;
-                      thethumb img/thumb_url">
- 
-        <div class="imagebox"> 
+    <div id="source">
+    <tal:images tal:repeat="img view/adapter/cooked_images">
+        <div tal:define="number repeat/img/index; 
+                        theimage img/image_url;
+                        thethumb img/thumb_url"
+                        class="imagebox" tal:attributes="data-id number"> 
         <a href="" tal:attributes="href img/link" >    
             <img src="" tal:define="image python: view.settings.simplegallery_use_icons and 
                 thethumb or
@@ -16,6 +16,33 @@
                tal:content="structure img/description" tal:condition="view/settings/quicksand_showdescription">Description</p> 
         </a>
         </div>  
-    </div>     
     </tal:images>    
+    </div>     
+
+
+<div id="destination" class="hidden">
+        <div class="imagebox" data-id="0"> 
+        <a href="http://localhost:8080/thumbnailzoom/bilder/tittel/view">    
+            <img src="http://localhost:8080/thumbnailzoom/bilder/tittel/image_thumb">
+        </a>
+        </div>  
+  
+        <div class="imagebox" data-id="2"> 
+        <a href="http://localhost:8080/thumbnailzoom/bilder/asdfawerqwer/view">    
+            <img src="http://localhost:8080/thumbnailzoom/bilder/asdfawerqwer/image_thumb">
+        </a>
+        </div>  
+        <div class="imagebox" data-id="3"> 
+        <a href="http://localhost:8080/thumbnailzoom/bilder/werqwerqw/view">    
+            <img src="http://localhost:8080/thumbnailzoom/bilder/werqwerqw/image_thumb">
+        </a>
+        </div>  
+</div>     
+
+
+    <script type="text/javascript">
+$(window).load(function(){
+    $('#source').quicksand( $('#destination div') );
+});
+</script>
 </div>
