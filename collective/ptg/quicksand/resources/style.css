@@ -1,16 +1,8 @@
-.quicksand {
-    margin: 0 0  9px 0;
-    position: relative;
+.image-grid {
+  margin: 0;
 }
 
-
-#quicksandbox{
-  margin: -20px 0 0 -40px;
-  padding-left: 45px;
-  width: 840px;
-}
-
-#quicksandbox:after {
+.image-grid:after {
   content: "";
   display: block;
   height: 0;
@@ -18,20 +10,23 @@
   clear: both;
 }
 
-#content #quicksandbox li {
-  width: 128px;
-  margin: 20px 0 0 35px;
+/* this is important, one can not set the the same on the divs (a bug in quicksand) */
+.image-grid li {
+  margin: 10px 10px 0 0;
   float: left;
   text-align: center;
   font-family: "Helvetica Neue", sans-serif;
   line-height: 17px;
   color: #686f74;
-  height: 177px;
   overflow: hidden;
 }
 
-#content  #quicksandbox li img  {
+.image-grid li img {
   display: block;
+  margin:  auto;
 }
 
- 
+
+
+
+

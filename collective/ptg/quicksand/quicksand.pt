@@ -1,16 +1,16 @@
+  	    <ps tal:content="view/all_keywords" />
 <div class="quicksand">
     <form id="filter">
     	<fieldset>
-    	    <legend>Filter by type</legend>
+    	    <legend>Filter by keyword</legend>
 	        <label><input type="radio" name="type" value="all" checked="checked">Everything</label>
-			<label><input type="radio" name="type" value="bilde">Bilde</label>
-        	<label><input type="radio" name="type" value="util">Utilities</label>
-        	<label><input type="radio" name="type" value="espen">Espen</label>
+    	    <tal:keywords tal:repeat="keyword view/all_keywords">
+    	        <label><input type="radio" name="type" value="keyword"><span tal:content="keyword">tekst</span> </label>
+    	    </tal:keywords>
         </fieldset>
- 
 
     </form>
-    <ul id="quicksandbox">
+    <ul id="quicksandbox" class="image-grid">
     <tal:images tal:repeat="img view/adapter/cooked_images">
         <li tal:define="number repeat/img/index; 
                         theimage img/image_url;

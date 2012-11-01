@@ -4,16 +4,21 @@ from collective.plonetruegallery.browser.views.display import BaseDisplayType
 from collective.plonetruegallery.interfaces import IBaseSettings
 from zope import schema
 from zope.i18nmessageid import MessageFactory
+from sets import Set
+
+
+from collective.plonetruegallery.utils import getGalleryAdapter
+
 
 _ = MessageFactory('collective.ptg.quicksand')
 
 class IQuicksandDisplaySettings(IBaseSettings):
-    quicksand_imagewidth = schema.Int(
+    quicksand_boxwidth = schema.Int(
         title=_(u"label_quicksand_imagewidth",
             default=u"Width of (each) image"),
         default=400,
         min=50)
-    quicksand_imageheight = schema.Int(
+    quicksand_boxheight = schema.Int(
         title=_(u"label_quicksand_imageheight",
             default=u"Height of (each) image"),
         default=260,
@@ -22,6 +27,14 @@ class IQuicksandDisplaySettings(IBaseSettings):
         title=_(u"label_quicksand_use_icons",
             default=u"Use Thumbnail size instead of Size"),
         default=False)
+    quicksand_showtitle = schema.Bool(
+        title=_(u"label_quicksand_showtitle",
+            default=u"Show the title?"),
+        default=True)
+    quicksand_showdescription = schema.Bool(
+        title=_(u"label_quicksand_showdescription",
+            default=u"Show the the description?"),
+        default=True)
     quicksand_style = schema.Choice(
         title=_(u"label_quicksand_style",
                 default=u"What stylesheet (css file) to use"),
@@ -50,10 +63,21 @@ class QuicksandDisplayType(BaseDisplayType):
     schema = IQuicksandDisplaySettings
     description = _(u"label_quicksand_display_type",
         default=u"Quicksand")
+    
+    def all_keywords(self):
+        objects = self.adapter.cooked_images
+        uniques = ""
+        for item in objects:
+            uniques += " "
+            uniques += (item['keywords'])
+        tags = uniques.split()
+        return (set(tags))
+        #return tags.sort()
+        #should I use set() here instead (?). 
+        #Was not successful due to multiple keywords on one object
 
     def javascript(self):
         return u"""
- 
 <script type="text/javascript"
 src="%(portal_url)s/++resource++ptg.quicksand/jquery.quicksand.js">
 </script>
@@ -119,11 +143,16 @@ src="%(portal_url)s/++resource++ptg.quicksand/jquery.quicksand.js">
                 self.settings.quicksand_custom_style)
 
         return u"""
+<style>
+.image-grid li {
+    width: %(boxwidth)ipx;
+    height: %(boxheight)ipx;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="%(style)s"/>
 """ % {
-        'boxheight': self.settings.quicksand_imageheight,
-        'boxwidth': self.settings.quicksand_imagewidth,
+        'boxheight': self.settings.quicksand_boxheight,
+        'boxwidth': self.settings.quicksand_boxwidth,
         'style': style
        }
 QuicksandSettings = createSettingsFactory(QuicksandDisplayType.schema)
