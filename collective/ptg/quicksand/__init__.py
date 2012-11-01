@@ -57,9 +57,52 @@ class QuicksandDisplayType(BaseDisplayType):
 src="%(portal_url)s/++resource++ptg.quicksand/jquery.quicksand.js">
 </script>
 <script type="text/javascript">
-$(window).load(function(){
- 
-});
+  // Custom sorting plugin
+  (function($) {
+	$.fn.sorted = function(customOptions) {
+		var options = {
+			by: function(a) { return a.text(); }
+		};
+		$.extend(options, customOptions);
+		$data = $(this);
+		arr = $data.get();
+		return $(arr);
+	};
+  });
+
+  // DOMContentLoaded
+$(document).ready(function() {
+  
+	// bind radiobuttons in the form
+	var $filterType = $('#filter input[name="type"]');
+	var $filterSort = '';
+	
+	// get the first collection
+	var $quicksandbox = $('#quicksandbox');
+	
+	// clone quicksandbox to get a second collection
+	var $data = $quicksandbox.clone();
+
+	// attempt to call Quicksand on every form change
+	$filterType.add($filterSort).change(function(e) {
+		if ($($filterType+':checked').val() == 'all') {
+			var $filteredData = $data.find('li');
+		} else {
+			var $filteredData = $data.find('.bilde');
+		}
+	
+	  // no sorting
+		var $sortedData = $filteredData; 
+
+		
+		// finally, call quicksand
+		$quicksandbox.quicksand($sortedData, {
+			duration: %(speed)i,
+			easing: 'easeInOutQuad'
+		});
+	});
+  });
+
 </script>
 """ % {
     'speed': self.settings.duration,

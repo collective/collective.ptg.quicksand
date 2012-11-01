@@ -5,6 +5,35 @@
     position: relative;
 }
 
-.hidden {
-	display: none;
+
+#quicksandbox{
+  margin: -20px 0 0 -40px;
+  padding-left: 45px;
+  width: 840px;
 }
+
+#quicksandbox:after {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+#content #quicksandbox li {
+  width: 128px;
+  margin: 20px 0 0 35px;
+  float: left;
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 17px;
+  color: #686f74;
+  height: 177px;
+  overflow: hidden;
+}
+
+#content  #quicksandbox li img  {
+  display: block;
+}
+
+ 
