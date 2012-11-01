@@ -113,7 +113,7 @@ src="%(portal_url)s/++resource++ptg.quicksand/jquery.quicksand.js">
 		if ($($filterType+':checked').val() == 'all') {
 			var $filteredData = $data.find('li');
 		} else {
-			var $filteredData = $data.find('li[class=' + $($filterType+":checked").val() + ']');
+			var $filteredData = $data.find('.' + $($filterType+":checked").val());
 		}
 	
 	  // no sorting
