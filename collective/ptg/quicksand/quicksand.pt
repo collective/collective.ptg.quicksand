@@ -1,15 +1,4 @@
 <div class="quicksand">
-<<<<<<< HEAD
- 
-    <div id="source">
-    <tal:images tal:repeat="img view/adapter/cooked_images">
-        <div class="quicksandbox" tal:define="number repeat/img/index; 
-                        theimage img/image_url;
-                        thethumb img/thumb_url;
-                        keywords img/keywords"
-                        tal:attributes="data-id number; class keywords"> 
-        <a href="" tal:attributes="href img/link" >    
-=======
     <form id="filter">
     	<fieldset>
     	    <legend>Filter by type</legend>
@@ -21,7 +10,7 @@
  
 
     </form>
-    <ul id="quicksandbox" class="image-grid">
+    <ul id="quicksandbox">
     <tal:images tal:repeat="img view/adapter/cooked_images">
         <li tal:define="number repeat/img/index; 
                         theimage img/image_url;
@@ -29,7 +18,6 @@
                         theclass img/keywords"
                         tal:attributes="data-id number; class theclass"> 
         	<a href="" tal:attributes="href img/link" >    
->>>>>>> 29d6204c70fef8cff7ec640fe671a1fe24b9858c
             <img src="" tal:define="image python: view.settings.simplegallery_use_icons and 
                 thethumb or
                 theimage" 
@@ -38,23 +26,8 @@
             <h3 class="image-title" tal:content="img/title" tal:condition="view/settings/quicksand_showtitle">Title</h3> 
             <p class="image-desc" 
                tal:content="structure img/description" tal:condition="view/settings/quicksand_showdescription">Description</p> 
-<<<<<<< HEAD
-        </a>
-        <div tal:content="keywords" />
-        </div>  
-    </tal:images>    
-    </div>     
-
-    <script type="text/javascript">
-$(window).load(function(){
-    $('#source').quicksand( $('.('tagee',)') );
-});
-</script>
-</div>
-=======
         	</a>
         </li>  
     </tal:images>    
     </ul>     
  </div>
->>>>>>> 29d6204c70fef8cff7ec640fe671a1fe24b9858c
