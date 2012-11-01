@@ -43,7 +43,7 @@ class IQuicksandDisplaySettings(IBaseSettings):
         title=_(u"label_custom_style",
             default=u"Name of Custom css file if you chose that above"),
         default=u"mycustomstyle.css")
-        
+
 
 class QuicksandDisplayType(BaseDisplayType):
     name = u"quicksand"
@@ -53,6 +53,7 @@ class QuicksandDisplayType(BaseDisplayType):
 
     def javascript(self):
         return u"""
+ 
 <script type="text/javascript"
 src="%(portal_url)s/++resource++ptg.quicksand/jquery.quicksand.js">
 </script>
@@ -71,7 +72,7 @@ src="%(portal_url)s/++resource++ptg.quicksand/jquery.quicksand.js">
   });
 
   // DOMContentLoaded
-$(document).ready(function() {
+  $(function() {
   
 	// bind radiobuttons in the form
 	var $filterType = $('#filter input[name="type"]');
@@ -88,7 +89,7 @@ $(document).ready(function() {
 		if ($($filterType+':checked').val() == 'all') {
 			var $filteredData = $data.find('li');
 		} else {
-			var $filteredData = $data.find('.bilde');
+			var $filteredData = $data.find('li[class=' + $($filterType+":checked").val() + ']');
 		}
 	
 	  // no sorting
@@ -97,12 +98,11 @@ $(document).ready(function() {
 		
 		// finally, call quicksand
 		$quicksandbox.quicksand($sortedData, {
-			duration: %(speed)i,
+			duration: 800,
 			easing: 'easeInOutQuad'
 		});
 	});
   });
-
 </script>
 """ % {
     'speed': self.settings.duration,
