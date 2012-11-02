@@ -1,3 +1,8 @@
+ul#quicksandbox {
+	list-style-image: none;
+	list-style-type: none;
+}
+
 .image-grid {
   margin: 0;
 }
@@ -25,8 +30,4 @@
   display: block;
   margin:  auto;
 }
-
-
-
-
 

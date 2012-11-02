@@ -1,9 +1,8 @@
 <div class="quicksand">
-    <form id="filter">
+    <form id="filter" tal:condition="view/allkeywords">
     	<fieldset>
-    	    <legend>Filter by keyword</legend>
 	        <label><input type="radio" name="type" value="all" checked="checked">Everything</label>
-    	    <tal:keywords tal:repeat="keyword view/all_keywords">
+    	    <tal:keywords tal:repeat="keyword view/all_keywords" >
     	        <label><input type="radio" name="type" tal:attributes="value keyword"><span tal:content="keyword">tekst</span> </label>
     	    </tal:keywords>
         </fieldset>
