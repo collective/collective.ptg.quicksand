@@ -72,9 +72,7 @@ class QuicksandDisplayType(BaseDisplayType):
             uniques += (item['keywords'])
         tags = uniques.split()
         return set(tags)
-        #return tags.sort()
-        #should I use set() here instead (?). 
-        #Was not successful due to multiple keywords on one object
+        #Need to fix this for keywords containing spaces
 
     def javascript(self):
         return u"""

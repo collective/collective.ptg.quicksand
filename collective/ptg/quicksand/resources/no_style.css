@@ -1,7 +1,14 @@
-.quicksand {
-    position: relative;
+.image-grid:after {
+	content: "";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	clear: both;
 }
 
-.hidden {
-	display: none;
+/* this is important, one can not set the the same on the divs (a bug in quicksand) */
+
+.image-grid li {
+ 
 }
+
