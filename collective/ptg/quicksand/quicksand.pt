@@ -1,12 +1,9 @@
 <div class="quicksand">
-    <form id="filter" tal:condition="view/allkeywords">
-    	<fieldset>
+    <form id="filter">
 	        <label><input type="radio" name="type" value="all" checked="checked">Everything</label>
     	    <tal:keywords tal:repeat="keyword view/all_keywords" >
     	        <label><input type="radio" name="type" tal:attributes="value keyword"><span tal:content="keyword">tekst</span> </label>
     	    </tal:keywords>
-        </fieldset>
-
     </form>
     <ul id="quicksandbox" class="image-grid">
     <tal:images tal:repeat="img view/adapter/cooked_images">
@@ -25,6 +22,7 @@
             <p class="image-desc" 
                tal:content="structure img/description" tal:condition="view/settings/quicksand_showdescription">Description</p> 
         	</a>
+        	<p class="image-copyright" tal:condition="img/copyright">© <span tal:content="img/copyright">copyright</span></p>
         </li>  
     </tal:images>    
     </ul>     

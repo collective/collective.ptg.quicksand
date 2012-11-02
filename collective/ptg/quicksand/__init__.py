@@ -68,13 +68,16 @@ class QuicksandDisplayType(BaseDisplayType):
         default=u"Quicksand")
     
     def all_keywords(self):
+        #finding unique keywords
+        #must be a faster way to do this
         objects = self.adapter.cooked_images
         uniques = ""
         for item in objects:
             uniques += " "
             uniques += (item['keywords'])
         tags = uniques.split()
-        return set(tags)
+        tags = set(tags)
+        return sorted(tags)
         #Need to fix this for keywords containing spaces
 
     def javascript(self):
