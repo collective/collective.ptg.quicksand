@@ -1,6 +1,7 @@
 ul#quicksandbox {
 	list-style-image: none;
 	list-style-type: none;
+	margin:  10px 0;
 }
 
 .image-grid {
@@ -17,7 +18,7 @@ ul#quicksandbox {
 
 /* this is important, one can not set the the same on the divs (a bug in quicksand) */
 .image-grid li {
-  margin: 10px 10px 0 0;
+  margin: 0 10px 10px 0;
   float: left;
   text-align: center;
   font-family: "Helvetica Neue", sans-serif;

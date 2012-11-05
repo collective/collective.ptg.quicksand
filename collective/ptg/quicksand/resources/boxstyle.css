@@ -1,6 +1,7 @@
 ul#quicksandbox {
 	list-style-image: none;
 	list-style-type: none;
+	margin: 0px;
 }
 
 .image-grid {
@@ -18,7 +19,7 @@ ul#quicksandbox {
 /* this is important, one can not set the the same on the divs (a bug in quicksand) */
 
 .image-grid li {
-	margin: 10px 10px 0 0 !important;
+	margin: 10px 0px 10px 0 !important;
 	display: block;
 	border: 1px solid #ccc;
 	float: left;
