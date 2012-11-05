@@ -26,7 +26,6 @@ setup(name='collective.ptg.quicksand',
       install_requires=[
           'setuptools',
           'collective.plonetruegallery',
-          'collective.js.easing'
       ],
       entry_points="""
       # -*- Entry points: -*-

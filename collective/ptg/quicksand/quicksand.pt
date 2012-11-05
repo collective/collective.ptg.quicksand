@@ -23,6 +23,7 @@
                tal:content="structure img/description" tal:condition="view/settings/quicksand_showdescription">Description</p> 
         	</a>
         	<p class="image-copyright" tal:condition="img/copyright">© <span tal:content="img/copyright">copyright</span></p>
+        	<div tal:replace="structure img/bodytext" tal:condition="view/settings/enable_bodytext"></div>
         </li>  
     </tal:images>    
     </ul>     
