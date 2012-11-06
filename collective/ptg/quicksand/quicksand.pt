@@ -12,7 +12,7 @@
                         thethumb img/thumb_url;
                         theclass img/keywords"
                         tal:attributes="data-id number; class theclass"> 
-        	<a href="" tal:attributes="href img/link" >    
+        	<a href="" tal:attributes="href img/link" tal:omit-tag="not:view/settings/quicksand_linkable">    
             <img src="" tal:define="image python: view.settings.quicksand_use_icons and 
                 thethumb or
                 theimage" 

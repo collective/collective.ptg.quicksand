@@ -35,6 +35,10 @@ class IQuicksandDisplaySettings(IBaseSettings):
         title=_(u"label_quicksand_showdescription",
             default=u"Show the the description?"),
         default=True)
+    quicksand_linkable = schema.Bool(
+        title=_(u"label_quicksand_linkable",
+            default=u"Should the user go to the image he clicks on?"),
+        default=True)
     quicksand_style = schema.Choice(
         title=_(u"label_quicksand_style",
                 default=u"What stylesheet (css file) to use"),
