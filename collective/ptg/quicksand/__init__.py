@@ -112,10 +112,7 @@ class IQuicksandDisplaySettings(IBaseSettings):
                     default=u"easeInBounce")),
             SimpleTerm("easeOutBounce", "easeOutBounce",
                 _(u"label_quicksand_easing_easeOutBounce",
-                    default=u"easeOutBounce")),  
-            SimpleTerm("easeInOutBounce", "easeInOutBounce",
-                _(u"label_quicksand_easing_easeInOutBounce",
-                    default=u"easeInOutBounce")),                    
+                    default=u"easeOutBounce")),                     
 	        SimpleTerm("easeInOutBounce", "easeInOutBouncee",
                 _(u"label_quicksand_easing_easeInOutBounce",
                     default=u"easeInOutBounce")
