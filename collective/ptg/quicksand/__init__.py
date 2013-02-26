@@ -44,6 +44,9 @@ class IQuicksandDisplaySettings(IBaseSettings):
                 default=u"Which easing on the transitions"),
         default="easeInOutQuad",
         vocabulary=SimpleVocabulary([
+            SimpleTerm("swing", "swing",
+                _(u"label_quicksand_easing_swing",
+                    default=u"swing")),
             SimpleTerm("easeInQuad", "easeInQuad",
                 _(u"label_quicksand_easing_easeInQuad",
                     default=u"easeInQuad")),
@@ -212,8 +215,8 @@ src="%(portal_url)s/++resource++ptg.quicksand/jquery.easing.1.3.js">
 		
 		// finally, call quicksand
 		$quicksandbox.quicksand($sortedData, {
-			duration: 800,
-			easing: 'easeInOutQuad'
+			duration: %(speed)i,
+			easing: '%(easeInOutQuad)s'
 		});
 	});
   });
@@ -221,6 +224,7 @@ src="%(portal_url)s/++resource++ptg.quicksand/jquery.easing.1.3.js">
 """ % {
     'speed': self.settings.duration,
     'portal_url': self.portal_url,
+    'easing': self.settings.quicksand_easing,
 }
 
     def css(self):
