@@ -28,3 +28,5 @@ collective.ptg.quicksand.egg-info/requires.txt
 *.zip
 
 *.mo
+
+*.gz
