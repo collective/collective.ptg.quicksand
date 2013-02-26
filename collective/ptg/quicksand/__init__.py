@@ -213,7 +213,7 @@ src="%(portal_url)s/++resource++ptg.quicksand/jquery.easing.1.3.js">
 		// finally, call quicksand
 		$quicksandbox.quicksand($sortedData, {
 			duration: %(speed)i,
-			easing: '%(easeInOutQuad)s'
+			easing: '%(easing)s'
 		});
 	});
   });
