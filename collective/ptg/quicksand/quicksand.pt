@@ -16,7 +16,7 @@
             <img src="" tal:define="image python: view.settings.quicksand_use_icons and 
                 thethumb or
                 theimage" 
-                tal:attributes="src image"  
+                tal:attributes="src image; alt img/title"  
             	>
             <h3 class="image-title" tal:content="img/title" tal:condition="view/settings/quicksand_showtitle">Title</h3> 
             <p class="image-desc" 
