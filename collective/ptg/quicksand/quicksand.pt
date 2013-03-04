@@ -1,6 +1,6 @@
 <div class="quicksand">
     <form id="filter">
-	        <label><input type="radio" name="type" value="all" checked="checked">Everything</label>
+	        <label><input type="radio" name="type" value="all" checked="checked" i18n:translate="quicksand_radio_eveything">Everything</label>
     	    <tal:keywords tal:repeat="keyword view/all_keywords" >
     	        <label><input type="radio" name="type" tal:attributes="value keyword"><span tal:content="keyword">tekst</span> </label>
     	    </tal:keywords>
