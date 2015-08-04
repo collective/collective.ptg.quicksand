@@ -1,4 +1,4 @@
-<div class="quicksand">
+<div class="quicksand"  xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="collective.ptg.quicksand">
     <form id="filter">
 	        <label><input type="radio" name="type" value="all" checked="checked" i18n:translate="quicksand_radio_eveything">Everything</label>
     	    <tal:keywords tal:repeat="keyword view/all_keywords" >
