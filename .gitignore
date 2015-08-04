@@ -7,6 +7,8 @@ collective/.DS_Store
 
 .DS_Store
 
+build
+
 collective.ptg.quicksand.egg-info/PKG-INFO
 
 collective.ptg.quicksand.egg-info/not-zip-safe
@@ -30,3 +32,5 @@ collective.ptg.quicksand.egg-info/requires.txt
 *.mo
 
 *.gz
+
+build/lib/collective/ptg/quicksand/resources/style.css
