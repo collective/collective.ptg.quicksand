@@ -1,6 +1,15 @@
 Changelog
 =========
 
+
+0.3 (2016-02-02)
+-------------------
+
+- Upgraded js to 1.4
+- bugfixes
+- Only tested with Plone 5
+
+
 0.2.2 (2015-08-04)
 -------------------
 

@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.2.2.1'
+version = '0.3'
 
 setup(name='collective.ptg.quicksand',
       version=version,
@@ -12,6 +12,9 @@ setup(name='collective.ptg.quicksand',
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Framework :: Plone",
+        "Framework :: Plone :: 4.0",
+        "Framework :: Plone :: 4.3",
+        "Framework :: Plone :: 5.0",
         "Programming Language :: Python",
         ],
       keywords='plonetruegallery gallery plone addon',

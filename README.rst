@@ -7,3 +7,5 @@ http://razorjack.net/quicksand/
 
 You might find a demo here: 
 http://products.medialog.no/galleries/quicksand
+
+Works with Plone 5

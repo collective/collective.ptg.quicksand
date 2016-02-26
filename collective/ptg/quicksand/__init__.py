@@ -184,7 +184,6 @@ src="%(portal_url)s/++resource++ptg.quicksand/jquery.easing.1.3.js">
 		return $(arr);
 	};
   });
-
   // DOMContentLoaded
   $(function() {
   
@@ -197,21 +196,19 @@ src="%(portal_url)s/++resource++ptg.quicksand/jquery.easing.1.3.js">
 	
 	// clone quicksandbox to get a second collection
 	var $data = $quicksandbox.clone();
-
 	// attempt to call Quicksand on every form change
 	$filterType.add($filterSort).change(function(e) {
-		if ($($filterType+':checked').val() == 'all') {
+		if ($('#filter input[name="type"]:checked').val() == 'all') {
 			var $filteredData = $data.find('li');
 		} else {
-			var $filteredData = $data.find('.' + $($filterType+":checked").val());
+			var $filteredData = $data.find('.' + $('#filter input[name="type"]:checked').val());
 		}
 	
 	  // no sorting
 		var $sortedData = $filteredData; 
-
 		
 		// finally, call quicksand
-		$quicksandbox.quicksand($sortedData, {
+		$('#quicksandbox').quicksand($sortedData, {
 			duration: %(speed)i,
 			easing: '%(easing)s'
 		});
