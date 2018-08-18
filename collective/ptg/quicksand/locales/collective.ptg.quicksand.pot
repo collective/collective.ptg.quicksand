@@ -13,7 +13,7 @@
 ##############################################################################
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0\n"
+"Project-Id-Version: PACKAGE 1.0\n"
 "POT-Creation-Date: Tue Sep  4 15:49:58 2012\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -23,64 +23,196 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: zope/app/locales/extract.py\n"
 
+#. Default: "Name of Custom css file if you chose that above"
+#: ./__init__.py:142
+msgid "label_custom_style"
+msgstr ""
+
+#. Default: "Box style"
+#: ./__init__.py:130
+msgid "label_quicksand_boxstyle"
+msgstr ""
+
+#. Default: "Quicksand"
+#: ./__init__.py:150
+msgid "label_quicksand_display_type"
+msgstr ""
+
+#. Default: "Which easing on the transitions"
+#: ./__init__.py:43
+msgid "label_quicksand_easing"
+msgstr ""
+
+#. Default: "easeInBack"
+#: ./__init__.py:102
+msgid "label_quicksand_easing_easeInBack"
+msgstr ""
+
+#. Default: "easeInBounce"
+#: ./__init__.py:111
+msgid "label_quicksand_easing_easeInBounce"
+msgstr ""
+
+#. Default: "easeInCirc"
+#: ./__init__.py:87
+msgid "label_quicksand_easing_easeInCirc"
+msgstr ""
+
+#. Default: "easeInCubic"
+#: ./__init__.py:60
+msgid "label_quicksand_easing_easeInCubic"
+msgstr ""
+
+#. Default: "easeInElastic"
+#: ./__init__.py:96
+msgid "label_quicksand_easing_easeInElastic"
+msgstr ""
+
+#. Default: "easeInExpo"
+#: ./__init__.py:84
+msgid "label_quicksand_easing_easeInExpo"
+msgstr ""
+
+#. Default: "easeInOutBack"
+#: ./__init__.py:108
+msgid "label_quicksand_easing_easeInOutBack"
+msgstr ""
+
+#. Default: "easeInOutBounce"
+#: ./__init__.py:117
+msgid "label_quicksand_easing_easeInOutBounce"
+msgstr ""
+
+#. Default: "easeInOutCirc"
+#: ./__init__.py:93
+msgid "label_quicksand_easing_easeInOutCirc"
+msgstr ""
+
+#. Default: "easeInOutCubic"
+#: ./__init__.py:66
+msgid "label_quicksand_easing_easeInOutCubic"
+msgstr ""
+
+#. Default: "easeInOutQuad"
+#: ./__init__.py:57
+msgid "label_quicksand_easing_easeInOutQuad"
+msgstr ""
+
+#. Default: "easeInOutQuart"
+#: ./__init__.py:75
+msgid "label_quicksand_easing_easeInOutQuart"
+msgstr ""
+
+#. Default: "easeInOutSine"
+#: ./__init__.py:81
+msgid "label_quicksand_easing_easeInOutSine"
+msgstr ""
+
+#. Default: "easeInQuad"
+#: ./__init__.py:51
+msgid "label_quicksand_easing_easeInQuad"
+msgstr ""
+
+#. Default: "easeInQuart"
+#: ./__init__.py:69
+msgid "label_quicksand_easing_easeInQuart"
+msgstr ""
+
+#. Default: "easeInSine"
+#: ./__init__.py:78
+msgid "label_quicksand_easing_easeInSine"
+msgstr ""
+
+#. Default: "easeOutBack"
+#: ./__init__.py:105
+msgid "label_quicksand_easing_easeOutBack"
+msgstr ""
+
+#. Default: "easeOutBounce"
+#: ./__init__.py:114
+msgid "label_quicksand_easing_easeOutBounce"
+msgstr ""
+
+#. Default: "easeOutCirc"
+#: ./__init__.py:90
+msgid "label_quicksand_easing_easeOutCirc"
+msgstr ""
+
+#. Default: "easeOutCubic"
+#: ./__init__.py:63
+msgid "label_quicksand_easing_easeOutCubic"
+msgstr ""
+
+#. Default: "easeOutElastic"
+#: ./__init__.py:99
+msgid "label_quicksand_easing_easeOutElastic"
+msgstr ""
+
+#. Default: "easeOutQuad"
+#: ./__init__.py:54
+msgid "label_quicksand_easing_easeOutQuad"
+msgstr ""
+
+#. Default: "easeOutQuart"
+#: ./__init__.py:72
+msgid "label_quicksand_easing_easeOutQuart"
+msgstr ""
+
+#. Default: "swing"
+#: ./__init__.py:48
+msgid "label_quicksand_easing_swing"
+msgstr ""
+
+#. Default: "Height of (each) image"
+#: ./__init__.py:22
+msgid "label_quicksand_imageheight"
+msgstr ""
+
+#. Default: "Width of (each) image"
+#: ./__init__.py:17
+msgid "label_quicksand_imagewidth"
+msgstr ""
+
+#. Default: "Should the user go to the image he clicks on?"
+#: ./__init__.py:39
+msgid "label_quicksand_linkable"
+msgstr ""
+
+#. Default: "Show the the description?"
+#: ./__init__.py:35
+msgid "label_quicksand_showdescription"
+msgstr ""
+
+#. Default: "Show the title?"
+#: ./__init__.py:31
+msgid "label_quicksand_showtitle"
+msgstr ""
+
+#. Default: "What stylesheet (css file) to use"
+#: ./__init__.py:122
+msgid "label_quicksand_style"
+msgstr ""
+
+#. Default: "Custom css file"
+#: ./__init__.py:136
+msgid "label_quicksand_style_custom"
+msgstr ""
+
 #. Default: "Default"
+#: ./__init__.py:127
 msgid "label_quicksand_style_default"
 msgstr ""
 
 #. Default: "No style / css file"
+#: ./__init__.py:133
 msgid "label_quicksand_style_no"
 msgstr ""
 
-#. Default: "Custom css file"
-msgid "label_quicksand_style_custom"
-msgstr ""
-
-#. Default: "Name of Custom css file if you chose that above"
-msgid "label_custom_style"
-msgstr ""
-
-#. Default: "Quicksand"
-msgid "label_quicksand_display_type"
-msgstr ""
-
-#. Default: "Number of images before a forced new row (use a high number if you dont want this)"
-msgid "label_quicksand_columns"
-msgstr ""
-
-#. Default: "How many slide in effects (4 is from all sides)"
-msgid "label_quicksand_effectcount"
-msgstr ""
-
-#. Default: "1 (left)"
-msgid "label_quicksand_effectcount1"
-msgstr ""
-
-#. Default: "2 (left, top)"
-msgid "label_quicksand_effectcount2"
-msgstr ""
-
-#. Default: "3 (left, top, right)"
-msgid "label_quicksand_effectcount3"
-msgstr ""
-
-#. Default: "4 (left, top, right, bottom)"
-msgid "label_quicksand_effectcount4"
-msgstr ""
-
-#. Default: "Width of (each) image"
-msgid "label_quicksand_imagewidth"
-msgstr ""
-
-#. Default: "Height of (each) image"
-msgid "label_quicksand_imageheight"
-msgstr ""
-
 #. Default: "Use Thumbnail size instead of Size"
+#: ./__init__.py:27
 msgid "label_quicksand_use_icons"
 msgstr ""
 
-
-#. Default: "What stylesheet (css file) to use"
-msgid "label_quicksand_style"
+#: ./quicksand.pt:3
+msgid "quicksand_radio_eveything"
 msgstr ""
-
