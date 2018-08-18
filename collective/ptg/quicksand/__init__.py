@@ -33,7 +33,7 @@ class IQuicksandDisplaySettings(IBaseSettings):
         default=True)
     quicksand_showdescription = schema.Bool(
         title=_(u"label_quicksand_showdescription",
-            default=u"Show the the description?"),
+            default=u"Show the description?"),
         default=True)
     quicksand_linkable = schema.Bool(
         title=_(u"label_quicksand_linkable",
